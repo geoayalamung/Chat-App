@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My chat App</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1><%= username %>'s chat  </h1> <br>
+    <input type="text" id="username"  value= "<%= username %>" />
+    
+    <div class="chat-container">
+
+    <select id="room">
+      <option value="" selected>Select a room </option>
+      <option value="room 1">Room 1</option>
+      <option value="room 2">Room 2</option>
+      <option value="room 3">Room 3</option>
+      <option value="room 4">Room 4</option>
+      <option value="room 5">Room 5</option>
+    </select>
+
+    <ul id="messages"></ul>
+
+    <form id="form" action="">
+      <input type="text" id="input" autocomplete="off" placeholder="Write something..." />
+      <button>Send Message</button>
+    </form>
+  </div>
+    <button id="leave-room">Leave Room x </button>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
